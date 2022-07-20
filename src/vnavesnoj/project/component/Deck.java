@@ -16,9 +16,50 @@
 
 package vnavesnoj.project.component;
 
+import java.util.Random;
+
 /**
  * @author vnavesnoj
  * @link vnavesnoj@gmail.com
  */
 public class Deck {
+
+    private final int[] cards;
+
+    private int count;
+
+    public Deck() {
+        int[] cards = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        this.cards = shuffle(cards);
+        this.count = cards.length;
+    }
+
+    private int[] shuffle(final int[] cards) {
+        Random random = new Random();
+        for (int i = 0; i < cards.length; i++) {
+            int randomNumber = random.nextInt(cards.length);
+            if (i != randomNumber) {
+                swap(cards, i, randomNumber);
+            }
+        }
+        return cards;
+    }
+
+    private void swap(final int[] cards, final int i, final int randomNumber) {
+        int temp = cards[i];
+        cards[i] = cards[randomNumber];
+        cards[randomNumber] = temp;
+    }
+
+    public int[] getCards() {
+        return cards;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(final int count) {
+        this.count = count;
+    }
 }
