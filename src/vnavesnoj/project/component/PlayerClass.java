@@ -20,35 +20,12 @@ package vnavesnoj.project.component;
  * @author vnavesnoj
  * @link vnavesnoj@gmail.com
  */
-public abstract class PlayerClass {
+public enum PlayerClass {
 
-    private int health;
+    WARRIOR,
 
-    private int minDamage;
+    ARCHER,
 
-    private int maxDamage;
+    MAGE
 
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(final int health) {
-        this.health = health;
-    }
-
-    public int getMinDamage() {
-        return minDamage;
-    }
-
-    public void setMinDamage(final int minDamage) {
-        this.minDamage = minDamage;
-    }
-
-    public int getMaxDamage() {
-        return maxDamage;
-    }
-
-    public void setMaxDamage(final int maxDamage) {
-        this.maxDamage = maxDamage;
-    }
 }

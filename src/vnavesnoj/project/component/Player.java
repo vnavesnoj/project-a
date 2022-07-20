@@ -24,10 +24,10 @@ public class Player {
 
     private final Deck deck;
 
-    private final PlayerClass playerClass;
+    private final PlayerStats playerStats;
 
-    public Player(PlayerClass playerClass, final Deck deck) {
-        this.playerClass = playerClass;
+    public Player(final PlayerClass playerClass, final Deck deck) {
+        this.playerStats = new PlayerStats(playerClass);
         this.deck = deck;
     }
 }
