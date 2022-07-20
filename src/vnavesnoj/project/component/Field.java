@@ -20,17 +20,14 @@ package vnavesnoj.project.component;
  * @author vnavesnoj
  * @link vnavesnoj@gmail.com
  */
-public class Player {
+public class Field {
 
-    private final Deck deck;
+    private final int[] currentField;
 
-    private final PlayerStats playerStats;
+    private int fieldCount;
 
-    private final Field field;
-
-    public Player(final PlayerClass playerClass, final Deck deck, int fieldSize) {
-        this.playerStats = new PlayerStats(playerClass);
-        this.deck = deck;
-        this.field = new Field(fieldSize);
+    public Field(int size) {
+        this.currentField = new int[size];
+        this.fieldCount = 0;
     }
 }
