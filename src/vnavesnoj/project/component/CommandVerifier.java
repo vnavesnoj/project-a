@@ -16,15 +16,19 @@
 
 package vnavesnoj.project.component;
 
-import java.util.Scanner;
-
 /**
  * @author vnavesnoj
  * @link vnavesnoj@gmail.com
  */
-public class ConsoleCommandScanner {
+public class CommandVerifier {
 
-    public String scanCommand() {
-        return new Scanner(System.in).nextLine();
+    public boolean tryToVerifierCommand(String command) {
+        command = toFormatCommand(command);
+        return command.equals("take") || command.equals("damage") || command.equals("reset") || command.equals("pass")
+                || command.equals("stats") || command.equals("fields") || command.equals("decks");
+    }
+
+    private String toFormatCommand(final String command) {
+        return command.trim().toLowerCase();
     }
 }
