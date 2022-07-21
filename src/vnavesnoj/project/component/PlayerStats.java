@@ -22,7 +22,7 @@ package vnavesnoj.project.component;
  */
 public class PlayerStats {
 
-    private PlayerClass playerClass;
+    private final PlayerClass playerClass;
 
     private int health;
 
@@ -65,5 +65,9 @@ public class PlayerStats {
 
     public int getMaxDamage() {
         return maxDamage;
+    }
+
+    public PlayerClass getPlayerClass() {
+        return playerClass;
     }
 }

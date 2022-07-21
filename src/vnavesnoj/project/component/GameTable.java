@@ -39,4 +39,16 @@ public class GameTable {
             decks[i] = players[i].getDeck();
         }
     }
+
+    public PlayerStats[] getPlayerStats() {
+        return playerStats;
+    }
+
+    public Field[] getFields() {
+        return fields;
+    }
+
+    public Deck[] getDecks() {
+        return decks;
+    }
 }
