@@ -22,6 +22,8 @@ package vnavesnoj.project.component;
  */
 public class PlayerStats {
 
+    private PlayerClass playerClass;
+
     private int health;
 
     private final int minDamage;
@@ -30,14 +32,17 @@ public class PlayerStats {
 
     public PlayerStats(final PlayerClass playerClass) {
         if (playerClass == PlayerClass.WARRIOR) {
+            this.playerClass = PlayerClass.WARRIOR;
             health = 42;
             minDamage = 10;
             maxDamage = 20;
         } else if (playerClass == PlayerClass.ARCHER) {
+            this.playerClass = PlayerClass.ARCHER;
             health = 40;
             minDamage = 10;
             maxDamage = 18;
         } else if (playerClass == PlayerClass.MAGE) {
+            this.playerClass = PlayerClass.MAGE;
             health = 38;
             minDamage = 10;
             maxDamage = 22;
