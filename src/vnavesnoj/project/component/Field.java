@@ -16,18 +16,50 @@
 
 package vnavesnoj.project.component;
 
+
 /**
  * @author vnavesnoj
  * @link vnavesnoj@gmail.com
  */
 public class Field {
 
-    private final int[] currentField;
+    private final int[] currentFieldMassive;
+
+    private final int maxPossibleSizeOfFieldMassive;
 
     private int fieldCount;
 
     public Field(int size) {
-        this.currentField = new int[size];
+        this.currentFieldMassive = new int[size];
+        this.maxPossibleSizeOfFieldMassive = size;
         this.fieldCount = 0;
+    }
+
+    public int[] getCurrentFieldMassive() {
+        return currentFieldMassive;
+    }
+
+    public int getFieldCount() {
+        return fieldCount;
+    }
+
+    public void increaseFieldCountBy(final int number) {
+        fieldCount += number;
+    }
+
+    public void setFieldCount(final int fieldCount) {
+        this.fieldCount = fieldCount;
+    }
+
+    public int getMaxPossibleSizeOfFieldMassive() {
+        return maxPossibleSizeOfFieldMassive;
+    }
+
+    public int getFieldValue() {
+        int sum = 0;
+        for (final int value : currentFieldMassive) {
+            sum += value;
+        }
+        return sum;
     }
 }

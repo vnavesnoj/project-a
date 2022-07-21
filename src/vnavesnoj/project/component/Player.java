@@ -33,4 +33,16 @@ public class Player {
         this.deck = deck;
         this.field = new Field(fieldSize);
     }
+
+    public Field getField() {
+        return field;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public PlayerStats getPlayerStats() {
+        return playerStats;
+    }
 }

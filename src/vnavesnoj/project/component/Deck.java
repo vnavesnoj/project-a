@@ -24,14 +24,14 @@ import java.util.Random;
  */
 public class Deck {
 
-    private final int[] cards;
+    private final int[] deckMassive;
 
-    private int count;
+    private int deckCount;
 
     public Deck() {
         int[] cards = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        this.cards = shuffle(cards);
-        this.count = cards.length;
+        this.deckMassive = shuffle(cards);
+        this.deckCount = cards.length;
     }
 
     private int[] shuffle(final int[] cards) {
@@ -51,15 +51,19 @@ public class Deck {
         cards[randomNumber] = temp;
     }
 
-    public int[] getCards() {
-        return cards;
+    public boolean isEmpty() {
+        return deckCount <= 0;
     }
 
-    public int getCount() {
-        return count;
+    public int[] getDeckMassive() {
+        return deckMassive;
     }
 
-    public void setCount(final int count) {
-        this.count = count;
+    public int getDeckCount() {
+        return deckCount;
+    }
+
+    public void decreaseDeckCountBy(final int number) {
+        deckCount -= number;
     }
 }

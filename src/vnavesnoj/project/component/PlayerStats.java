@@ -50,8 +50,8 @@ public class PlayerStats {
         return health;
     }
 
-    public void setHealth(final int health) {
-        this.health = health;
+    public void decreaseHealthBy(final int number) {
+        this.health -= number;
     }
 
     public int getMinDamage() {
